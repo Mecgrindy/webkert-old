@@ -1,0 +1,6 @@
+<h3>{{movie.title}}
+    <small *ngIf="movie.lengthMin">({{movie.lengthMin}}p)</small>
+</h3>
+<img *ngIf="movie.img" [src]="movie.img" alt="borito">
+<p>{{movie.description}}</p>
+<div [style.backgroundColor]="movie.imdb > 8.3 ? 'magenta': 'red'" class="imdb">{{movie.imdb}}</div>
