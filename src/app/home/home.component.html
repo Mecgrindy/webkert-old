@@ -3,7 +3,7 @@
 </div>
 <div [ngSwitch]="category">
     <div *ngSwitchCase="'movie'" class="container">
-        <web-movie *ngFor="let movie of movies" [movie]="movie" appOnHover="#44AACD"></web-movie>
+        <web-movie *ngFor="let movie of movies" [movie]="movie" webOnHover></web-movie>
     </div>
     <div *ngSwitchDefault class="container">
         <web-splash-screen></web-splash-screen>

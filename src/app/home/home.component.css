@@ -7,7 +7,7 @@
 
 web-movie,
 web-game {
-  background-color: #fff;
+  background-color: #eee;
   padding: 16px;
   min-width: 200px;
   flex: 1;
@@ -19,5 +19,4 @@ web-game {
 web-movie:hover,
 web-game:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  color: white;
 }
