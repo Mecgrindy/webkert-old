@@ -5,8 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
-import { OnHoverDirective } from './on-hover.directive';
+import { OnHoverDirective } from './directives/on-hover.directive';
 import { MovieComponent } from './movie/movie.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { NavComponent } from './nav/nav.component';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -14,12 +22,19 @@ import { MovieComponent } from './movie/movie.component';
     HomeComponent,
     SplashScreenComponent,
     OnHoverDirective,
-    MovieComponent
+    MovieComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
