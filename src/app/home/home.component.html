@@ -1,14 +1,17 @@
-<web-nav></web-nav> <!-- [categories]="categories" [selectedCategory]="category" (callSelectC)="onSelect($event)" -->
+<web-nav [categories]="categories"
+[selectedCategory]="category" (callSelectC)="onSelect($event)"
+></web-nav> <!-- [categories]="categories"  -->
 
 <div [ngSwitch]="category">
   <div *ngSwitchCase="'movie'" class="container">
     <web-movie *ngFor="let movie of movies" [movie]="movie" (getMovie)="onFavorite($event)"></web-movie>
   </div>
-  <!-- <div *ngSwitchCase="'star'" class="container">
+  <div *ngSwitchCase="'favorite'" class="container">
     <web-favorite *ngFor="let favorite of favorites" [favorite]="favorite"></web-favorite> 
-  </div> -->
+  </div>
+  <!--  -->
   <!-- fav html movie ts input -->
   <div *ngSwitchDefault class="container">
-    <web-splash-screen></web-splash-screen>  <!-- [categories]="categories" -->
+    <web-splash-screen [categories]="categories"></web-splash-screen>  <!-- [categories]="categories" -->
   </div>
 </div>
