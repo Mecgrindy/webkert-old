@@ -5,5 +5,6 @@ export interface Movie {
     imdb: number;
     lengthMin?: number;
     img?: string;
+    star?: boolean;
 }
 

@@ -1,4 +1,4 @@
-[mat-button] {
+.splash-title, [mat-button] {
   text-transform: capitalize;
 }
 
