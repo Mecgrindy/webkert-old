@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MOVIES } from '../movie/movies';
-import { CATEGORIES } from '../category/categories';
-import { Movie } from '../movie/movie';
+/* import { CATEGORIES } from '../category/categories';
+import { Movie } from '../movie/movie'; */
 
 @Component({
   selector: 'web-home',
@@ -9,22 +9,23 @@ import { Movie } from '../movie/movie';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  categories = CATEGORIES;
+  // categories = CATEGORIES; ng g int
+
   movies = MOVIES;
   category = 'movie';
-  favorites = [];
+  // favorites = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelect(event: string) {
+  /* onSelect(event: string) {
     this.category = event;
-  }
+  } */
 
-  onFavorite(event: Movie) {
+  /* onFavorite(event: Movie) {
     this.favorites.push(event);
-  }
+  } */
 
 }

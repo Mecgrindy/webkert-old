@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Category } from '../category/category';
+/* import { Category } from '../category/category'; */
 
 @Component({
   selector: 'web-splash-screen',
@@ -7,7 +7,7 @@ import { Category } from '../category/category';
   styleUrls: ['./splash-screen.component.css']
 })
 export class SplashScreenComponent implements OnInit {
-  @Input() categories: Category[];
+  /* @Input() categories: Category[]; */
 
   constructor() { }
 

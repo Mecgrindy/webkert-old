@@ -15,7 +15,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './nav/nav.component';
 import { MatRippleModule } from '@angular/material/core';
-import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { FavoriteComponent } from './favorite/favorite.component';
     OnHoverDirective,
     MovieComponent,
     NavComponent,
-    FavoriteComponent,
   ],
   imports: [
     BrowserModule,
