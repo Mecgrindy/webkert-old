@@ -8,15 +8,15 @@ export const CATEGORIES: Category[] = [
         color: 'teal'
     },
     {
+        title: 'Játékok',
+        icon: 'games',
+        value: 'game',
+        color: 'cyan'
+    },
+    {
         title: 'kedvencek',
         icon: 'star',
         value: 'favorite',
-        color: 'pink'
-    },
-    {
-        title: 'Tronok harca 8.',
-        icon: 'delete',
-        value: 'th',
-        color: 'black'
+        color: '#c2185b'
     }
-]
+];

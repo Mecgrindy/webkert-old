@@ -1,40 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MOVIES } from '../movie/movies';
 import { CATEGORIES } from '../category/categories';
 import { Movie } from '../movie/movie';
-/* import { CATEGORIES } from '../category/categories';
-import { Movie } from '../movie/movie'; */
+import { GAMES } from '../game/games';
 
 @Component({
   selector: 'web-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   categories = CATEGORIES;
-  favorites = [];
-  //  ng g int
-
   movies = MOVIES;
+  games = GAMES;
+  favorites = [];
   category = '';
-  // 
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
   onSelect(event: string) {
-    console.log(event);
     this.category = event;
   }
 
   onFavorite(event: Movie) {
-    this.favorites.push(event);
+    if (event && event.star) {
+      this.favorites.push(event);
+    }
+    this.favorites = this.favorites.filter(favorite => favorite.star);
   }
-  /*  */
-
-  /* 
-  } */
-
 }

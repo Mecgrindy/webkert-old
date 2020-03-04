@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, EventEmitter, Output,
-   OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component, OnInit, Input, EventEmitter, Output,
+  OnChanges, SimpleChanges
+} from '@angular/core';
 import { Category } from '../category/category';
 
 @Component({
@@ -7,14 +9,11 @@ import { Category } from '../category/category';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit/* , OnChanges  */ {
+export class NavComponent implements OnInit, OnChanges {
   sCategoryTitle: string;
   @Input() categories: Category[];
   @Output() callSelectC = new EventEmitter<string>();
   @Input() selectedCategory: string;
-  /* 
-  
-   */
 
   constructor() { }
 
@@ -29,17 +28,11 @@ export class NavComponent implements OnInit/* , OnChanges  */ {
   }
 
   setTitle() {
-    const category = 
-    this.categories.filter((item) => item.value === this.selectedCategory);
-    this.sCategoryTitle = 
-    category && category[0] ? category[0].title : '';
+    const category =
+      this.categories.filter((item) => item.value === this.selectedCategory);
+    this.sCategoryTitle =
+      category && category[0] ? category[0].title : '';
   }
-  /*
-     */
-
-  /* 
-
-   */
 
   select(habla: string) {
     this.callSelectC.emit(habla);

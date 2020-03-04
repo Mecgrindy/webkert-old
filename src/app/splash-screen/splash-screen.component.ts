@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Category } from '../category/category';
 
 @Component({
@@ -6,12 +6,10 @@ import { Category } from '../category/category';
   templateUrl: './splash-screen.component.html',
   styleUrls: ['./splash-screen.component.css']
 })
-export class SplashScreenComponent implements OnInit {
+export class SplashScreenComponent {
   @Input() categories: Category[];
+  @Output() callSelectC = new EventEmitter<string>();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
