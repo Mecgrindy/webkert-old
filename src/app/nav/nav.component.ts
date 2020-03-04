@@ -13,6 +13,7 @@ export class NavComponent implements OnInit, OnChanges {
   sCategoryTitle: string;
   @Input() categories: Category[];
   @Output() callSelectC = new EventEmitter<string>();
+  @Output() callSelectPage = new EventEmitter<string>();
   @Input() selectedCategory: string;
 
   constructor() { }

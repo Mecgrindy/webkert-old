@@ -3,6 +3,7 @@ import { MOVIES } from '../movie/movies';
 import { CATEGORIES } from '../category/categories';
 import { Movie } from '../movie/movie';
 import { GAMES } from '../game/games';
+import { Game } from '../game/game';
 
 @Component({
   selector: 'web-home',
@@ -15,6 +16,8 @@ export class HomeComponent {
   games = GAMES;
   favorites = [];
   category = '';
+  page = '';
+  detailData: any;
 
   constructor() { }
 
@@ -27,5 +30,14 @@ export class HomeComponent {
       this.favorites.push(event);
     }
     this.favorites = this.favorites.filter(favorite => favorite.star);
+  }
+
+  onSelectPage(event: string) {
+    this.page = event;
+  }
+
+  goToDetails(event: Movie | Game) {
+    this.detailData = event;
+    this.page = 'details';
   }
 }

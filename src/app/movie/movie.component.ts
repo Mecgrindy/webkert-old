@@ -9,16 +9,18 @@ import { Movie } from './movie';
 export class MovieComponent implements OnInit {
   @Input() hasAction = true;
   @Input() movie: Movie;
-  @Output() getMovie = new EventEmitter<Movie | null>();
+  @Output() callFav = new EventEmitter<Movie | null>();
+  @Output() getMovie = new EventEmitter<Movie>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggleStar() {
+  toggleStar(event: any) {
+    event.stopPropagation();
     this.movie.star = !this.movie.star;
-    this.getMovie.emit(this.movie);
+    this.callFav.emit(this.movie);
   }
 
 }

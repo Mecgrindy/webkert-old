@@ -1,4 +1,4 @@
-<mat-card webOnHover>
+<mat-card webOnHover (click)="getMovie.emit(movie)">
   <mat-card-header>
     <mat-card-title>{{movie.title}}<small *ngIf="movie.lengthMin">({{movie.lengthMin}}p)</small></mat-card-title>
     <mat-card-subtitle>
@@ -10,9 +10,8 @@
     <p>{{movie.description}}</p>
   </mat-card-content>
   <mat-card-actions *ngIf="hasAction">
-    <button mat-button (click)="toggleStar()">
-      <mat-icon *ngIf="movie.star;else star" 
-      style="color: #e91e63;">star</mat-icon>
+    <button mat-button (click)="toggleStar($event)">
+      <mat-icon *ngIf="movie.star;else star" style="color: #e91e63;">star</mat-icon>
       <ng-template #star>
         <mat-icon>star_outline</mat-icon>
       </ng-template>
