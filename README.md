@@ -1,15 +1,6 @@
 # Webkeretrendszerek fejlesztése
 
-## 03 Gyakorlat
-```bash
-ng g c home
-```
-```bash
-ng g d on-hover
-```
-```bash
-npm install @angular/forms
-```
+## 05 Gyakorlat
 
 # Telepítés
 
