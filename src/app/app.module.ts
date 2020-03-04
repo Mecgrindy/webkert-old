@@ -50,8 +50,8 @@ import { DetailsComponent } from './details/details.component';
     MatCardModule,
     MatRippleModule,
     MatInputModule,
-    /* MatTabsModule, */
-    /* MatMenuModule */
+    MatTabsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
