@@ -2,7 +2,7 @@
     <h3>Játék felvétel</h3>
     <mat-form-field class="max-width">
         <mat-label>Cím</mat-label>
-        <input matInput placeholder="Pl. Fortnite" formControlName="title" required>
+        <input matInput placeholder="Pl. Fortnite" focus formControlName="title" required>
     </mat-form-field>
     <mat-form-field class="max-width">
         <mat-label>Leírás</mat-label>
@@ -11,6 +11,6 @@
     </mat-form-field>
     <div style="display: flex; justify-content: flex-end;">
         <button mat-button (click)="dialogRef.close()" class="margin-right">MÉGSEM</button>
-        <button mat-button [mat-dialog-close]="form.value" cdkFocusInitial [disabled]="form.invalid">FELVÉTEL</button>
+        <button mat-button [mat-dialog-close]="form.value" [disabled]="form.invalid">FELVÉTEL</button>
     </div>
 </form>

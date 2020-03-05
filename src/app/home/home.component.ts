@@ -46,7 +46,9 @@ export class HomeComponent {
   openDialog() {
     const dialogRef = this.dialog.open(GameAddComponent, {});
     dialogRef.afterClosed().subscribe(result => {
-      this.games.push(result);
+      if (result && result.title) {
+        this.games.push(result);
+      }
     });
   }
 }
